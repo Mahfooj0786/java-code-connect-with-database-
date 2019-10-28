@@ -1,0 +1,18 @@
+Class.forName("com.mysql.jdbc.Driver");
+Connection cn=DriverManager.getConnection("jdbc:mysql://localhost/sms?user=root&password=maharastra");
+String str="insert into students values(?,?,?)";
+PreparedStatement st=cn.prepareStatement(str);
+st.setInt(1,Integer.parseInt(t1.getText()));
+st.setString(2,t2.getText());
+st.setFloat(3,Float.parseFloat(t3.getText()));
+int a=st.executeUpdate();
+cn.close();
+
+
+
+===================================================================================================
+
+WHERE sms= NAME OF DATABASE
+students= NAME OF TABLE
+AND t1, t2 , t3 ARE THE TEXTFIELD OF PROJECT
+maharastra= PASSWORD OF MYSQL
